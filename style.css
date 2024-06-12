@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    min-width: 500px;
+    text-align: center;
+    padding: 1.5rem;
+    border: 1px solid gray;
+    border-radius: 15px;
+    box-shadow: 10px 10px 50px 20px blue;
+    animation: shadowBounce 6s infinite;
+}
+
+.container .output{
+    background-color: lightsalmon;
+    border-radius: 20px;
+    margin: 1rem 1rem;
+    box-shadow: inset;
+    cursor: pointer;
+}
+
+.container .output .btn{
+    background-color: transparent;
+    width: 100%;
+    padding: 1.3rem;
+    border-radius: 60px;
+    border: 0;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+
+.container .output .btn #text{
+    flex-grow: 1;
+    text-align: center;
+    font-size: medium;
+}
+
+.container .output .btn:hover #copy{
+    transform: translateX(3px) translateY(-3px);
+}
+
+.container .output .btn #copy-text{
+    position: absolute;
+    top: -110px;
+    display: none;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.container .range{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.3rem;
+    margin-top: 10px;
+    padding: 10px 20px 10px;
+}
+
+.container .range #valueDisplay{
+    font-size: large;
+    font-weight: bold;
+}
+
+.container .form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 10px 20px 10px;
+    gap: 1.3rem;
+}
+
+.container .form .selects{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+    min-width: 150px;
+}
+
+label{
+    font-size: large;
+    font-weight: bold;
+}
+
+
+@media (max-width: 700px) {
+    .container {
+        width: 300px;
+    }
+ 
+    .container .output{
+        margin: 0.5rem 0.5rem;
+    }
+
+    .container .form{
+        flex-direction: column;
+        margin: 0;
+    }
+
+  
+}
+
+@media (max-width: 600px) {
+    .container {
+        min-width: 70px;
+        padding: 0.4rem;
+    }
+
+    .container .output #text{
+        font-size: small;
+        overflow: hidden;
+    }
+ 
+    
+}
+
+
+@keyframes shadowBounce {
+    0%, 100% {
+        box-shadow: 10px 10px 50px 20px blue;
+        transform: translateY(0);
+    }
+    25% {
+        box-shadow: 10px 10px 55px 25px blue;
+        transform: translateY(-10px);
+    }
+    50% {
+        box-shadow: 10px 10px 60px 30px blue;
+        transform: translateY(-20px);
+    }
+    75% {
+        box-shadow: 10px 10px 55px 25px blue;
+        transform: translateY(-10px);
+    }
+}
