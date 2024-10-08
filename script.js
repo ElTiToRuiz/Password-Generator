@@ -1,5 +1,5 @@
 const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-const upper = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase()
+const upper = alphabet.toUpperCase()
 const numbers = '0123456789';
 const special = "!@#$%^&*()_+-=[]{}|;':\",.<>/?`~";
 
